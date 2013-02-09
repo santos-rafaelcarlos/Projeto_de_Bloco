@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoBlocoDOO.Modelo", "Projeto de Bloco DOO\ProjetoBlocoDOO.Modelo.csproj", "{14998120-2968-4726-8F8E-1041E34F9B99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoBlocoDOO.Fabrica", "ProjetoBlocoDOO.Factory\ProjetoBlocoDOO.Fabrica.csproj", "{4F6BA440-B17A-484A-8023-71D6C8F6E323}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoBlocoDOO.Repositorio", "ProjetoBlocoDOO.Repository\ProjetoBlocoDOO.Repositorio.csproj", "{C5C3C20E-8B4E-4CB1-B240-E9F47F527590}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{E226BC3C-2AE9-4D2C-9762-EABF98FEE398}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D43B9C37-4BDC-4884-AABD-47E96B0919BC}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		Projeto de Bloco DOO.vsmdi = Projeto de Bloco DOO.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Projeto de Bloco DOO.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14998120-2968-4726-8F8E-1041E34F9B99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14998120-2968-4726-8F8E-1041E34F9B99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14998120-2968-4726-8F8E-1041E34F9B99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14998120-2968-4726-8F8E-1041E34F9B99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F6BA440-B17A-484A-8023-71D6C8F6E323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F6BA440-B17A-484A-8023-71D6C8F6E323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F6BA440-B17A-484A-8023-71D6C8F6E323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F6BA440-B17A-484A-8023-71D6C8F6E323}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5C3C20E-8B4E-4CB1-B240-E9F47F527590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5C3C20E-8B4E-4CB1-B240-E9F47F527590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5C3C20E-8B4E-4CB1-B240-E9F47F527590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5C3C20E-8B4E-4CB1-B240-E9F47F527590}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E226BC3C-2AE9-4D2C-9762-EABF98FEE398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E226BC3C-2AE9-4D2C-9762-EABF98FEE398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E226BC3C-2AE9-4D2C-9762-EABF98FEE398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E226BC3C-2AE9-4D2C-9762-EABF98FEE398}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

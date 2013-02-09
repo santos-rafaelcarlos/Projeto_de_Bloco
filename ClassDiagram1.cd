@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ProjetoBlocoDOO.Modelo.Administrador" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="3.75" Width="1.5" />
+    <Members>
+      <Field Name="id" Hidden="true" />
+      <Field Name="login" Hidden="true" />
+      <Field Name="nome" Hidden="true" />
+      <Field Name="senha" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AQACAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAQAAEAEgA=</HashCode>
+      <FileName>Entidades\Administrador.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ProjetoBlocoDOO.Modelo.Questionario" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="4" Width="1.5" />
+    <Members>
+      <Field Name="criador" Hidden="true" />
+      <Field Name="id" Hidden="true" />
+      <Field Name="questoes" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAASAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAEgA=</HashCode>
+      <FileName>Entidades\Questionario.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Criador" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Questoes" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ProjetoBlocoDOO.Modelo.Respondente" BaseTypeListCollapsed="true">
+    <Position X="1.5" Y="7.5" Width="1.5" />
+    <Members>
+      <Field Name="id" Hidden="true" />
+      <Field Name="login" Hidden="true" />
+      <Field Name="matricula" Hidden="true" />
+      <Field Name="nome" Hidden="true" />
+      <Field Name="senha" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AQASAAAAEAAAAAAAAAAAIAAAACAAAAAAAAAQAAEAEgA=</HashCode>
+      <FileName>Entidades\Respondente.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ProjetoBlocoDOO.Modelo.Curso" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="5.75" Width="1.5" />
+    <Members>
+      <Field Name="id" Hidden="true" />
+      <Field Name="nome" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AQACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAgA=</HashCode>
+      <FileName>Objetos de Valor\Curso.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ProjetoBlocoDOO.Modelo.Professor" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="2.75" Width="1.5" />
+    <Members>
+      <Field Name="id" Hidden="true" />
+      <Field Name="login" Hidden="true" />
+      <Field Name="nome" Hidden="true" />
+      <Field Name="senha" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AQACAAAAAAAAAAAAAAAAIAAAACAAAAAAAAAQAAEAEgA=</HashCode>
+      <FileName>Objetos de Valor\Professor.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ProjetoBlocoDOO.Modelo.Questao" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="id" Hidden="true" />
+      <Field Name="resposta" Hidden="true" />
+      <Field Name="texto" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAIAAAACAAAAAAACBAAAAAQAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Objetos de Valor\Questao.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Resposta" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ProjetoBlocoDOO.Modelo.Turma" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="9" Width="1.5" />
+    <Members>
+      <Field Name="id" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Objetos de Valor\Turma.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ProjetoBlocoDOO.Modelo.AberturaDaAvaliacao" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <Members>
+      <Field Name="questionario" Hidden="true" />
+      <Field Name="respondentes" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAQAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Servicos\AberturaDaAvaliacao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetoBlocoDOO.Modelo.CriarQuestionario" Collapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Servicos\CriarQuestionario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetoBlocoDOO.Modelo.Responder" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <Members>
+      <Field Name="questao" Hidden="true" />
+      <Field Name="respondente" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAQAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Servicos\Responder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjetoBlocoDOO.Modelo.Entidades.Avaliacao" BaseTypeListCollapsed="true">
+    <Position X="4.5" Y="5.5" Width="1.5" />
+    <Members>
+      <Field Name="curso" Hidden="true" />
+      <Field Name="dataInicio" Hidden="true" />
+      <Field Name="dataTermino" Hidden="true" />
+      <Field Name="identificador" Hidden="true" />
+      <Field Name="objetivoDaAvaliacao" Hidden="true" />
+      <Field Name="professor" Hidden="true" />
+      <Field Name="questionario" Hidden="true" />
+      <Field Name="respondente" Hidden="true" />
+      <Field Name="turma" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAACAAAAQQAAgNMABICSAASAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entidades\Avaliacao.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Questionario" />
+      <Property Name="Respondente" />
+      <Property Name="Turma" />
+      <Property Name="Professor" />
+      <Property Name="Curso" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Projeto_de_Bloco_DOO.Servicos.CriarQuestao" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Servicos\CriarQuestao.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projeto_de_Bloco_DOO.Servicos.ResponderQuestionario" Collapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <Members>
+      <Field Name="questionario" Hidden="true" />
+      <Field Name="respondente" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAQAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Servicos\ResponderQuestionario.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="ProjetoBlocoDOO.Modelo.IIdentificavel" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfaces\IIdentificavel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="ProjetoBlocoDOO.Modelo.IUsuario" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAQAAEAAAA=</HashCode>
+      <FileName>Interfaces\IUsuario.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="ProjetoBlocoDOO.Modelo.Resposta">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAQAAAAAAAAAAAABAAAAAEAAAACAAAgAAA=</HashCode>
+      <FileName>Objetos de Valor\Resposta.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
