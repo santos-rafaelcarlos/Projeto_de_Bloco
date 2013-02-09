@@ -7,13 +7,13 @@ namespace ProjetoBlocoDOO.DAO
 {
     public interface IDAL<T>
     {
-        List<T> GetAll();
+        List<T> BuscarTodos();
 
-        T Get(Guid id);
+        T Buscar(Guid id);
 
-        void Insert(T entity);
-        void Delete(T entity);
-        void Update(T entity);
-        void SaveAll();
+        void Inserir(T entity);
+        void Deletar(T entity);
+        void Atualizar(T entity);
+        void SalvarTudo();
     }
 }

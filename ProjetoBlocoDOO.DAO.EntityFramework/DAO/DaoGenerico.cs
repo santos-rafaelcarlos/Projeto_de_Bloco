@@ -17,34 +17,34 @@ namespace ProjetoBlocoDOO.DaoEF
             _context = context;
         }
         
-        public List<T> GetAll()
+        public List<T> BuscarTodos()
         {
             return _context.Set<T>().ToList();
         }
 
-        public T Get(Guid id)
-        {            
+        public T Buscar(Guid id)
+        {
             return _context.Set<T>().FirstOrDefault(e => e.Id == id);
         }
 
-        public void Insert(T entity)
+        public void Inserir(T entity)
         {
             _context.Set<T>().Add(entity);
-            SaveAll();
+            SalvarTudo();
         }
 
-        public void Delete(T entity)
+        public void Deletar(T entity)
         {
             _context.Set<T>().Remove(entity);
-            SaveAll();
+            SalvarTudo();
         }
-
-        public void Update(T entity)
+            
+        public void Atualizar(T entity)
         {
-            SaveAll();
+            SalvarTudo();
         }
 
-        public void SaveAll()
+        public void SalvarTudo()
         {
             _context.SaveChanges();
         }

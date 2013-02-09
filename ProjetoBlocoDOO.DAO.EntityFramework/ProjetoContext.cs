@@ -6,8 +6,8 @@ namespace ProjetoBloco.DaoEF
 {
     public class ProjetoContext : DbContext
     {
-        public ProjetoContext()
-            : base("Server=santos_rcs-Note;Database=Projeto;Trusted_Connection=true;")
+        public ProjetoContext(string connectionString)
+            : base(connectionString)
         {
             
         }

@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\DaoGenerico.cs" />
+    <Compile Include="Persistencia.cs" />
     <Compile Include="ProjetoContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

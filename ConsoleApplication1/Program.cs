@@ -1,24 +1,17 @@
 ﻿using System;
-using System.Text;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ProjetoBloco.Modelo;
+using System.Text;
 using ProjetoBloco.DaoEF;
-using ProjetoBlocoDOO.DaoEF;
+using ProjetoBloco.Modelo;
 using ProjetoBlocoDOO.Repository;
 
-namespace TestProject1
+namespace ConsoleApplication1
 {
-    [TestClass]
-    public class UnitTest1
+    class Program
     {
-        [TestMethod]
-        public void TestMethod1()
-        {
-            string connString = "Server=santos_rcs-Note;Database=Projeto;Trusted_Connection=true;";
-
-            ProjetoContext context = new ProjetoContext(connString);
+        static void Main(string[] args)
+        {            
             Aluno a = new Aluno()
             {
                 Id = Guid.NewGuid(),
@@ -31,7 +24,7 @@ namespace TestProject1
 
             RepositorioGenerico<Aluno> repo = new RepositorioGenerico<Aluno>();
             repo.Salvar(a);
-
+            Console.ReadKey();
         }
     }
 }
