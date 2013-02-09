@@ -1,39 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Data.Entity;
-using ProjetoBlocoDOO.Modelo.Entidades;
-using ProjetoBlocoDOO.Modelo;
-using Projeto_de_Bloco_DOO.Interfaces;
-using Projeto_de_Bloco_DOO.Objetos_de_Valor;
+﻿using System.Data.Entity;
+using ProjetoBloco.Modelo;
 
-namespace Projeto_de_Bloco_DOO.Entity
+
+namespace ProjetoBloco.DaoEF
 {
     public class ProjetoContext : DbContext
     {
         public ProjetoContext()
-            : base("Server=(Local);Database=Projeto;Trusted_Connection=true;")
+            : base("Server=santos_rcs-Note;Database=Projeto;Trusted_Connection=true;")
         {
-            string s = Database.Connection.ConnectionString;
+            
         }
 
-        public DbSet<Avaliacao> Avaliacao { get; set; }
-        public DbSet<Questionario> Questionario { get; set; }
-        public DbSet<Questao> Questao { get; set; }
-        public DbSet<Aluno> Aluno { get; set; }
-        public DbSet<Administrador> Administrador { get; set; }
-        public DbSet<IPessoa> Pessoa { get; set; }
-        public DbSet<Modulo> Modulos { get; set; }
-        public DbSet<Curso> Cursos { get; set; }
-        public DbSet<Professor> Professor { get; set; }
+        //public DbSet<Avaliacao> Avaliacao { get; set; }
+        //public DbSet<Questionario> Questionario { get; set; }
+        //public DbSet<Questao> Questao { get; set; }
+        //public DbSet<Aluno> Aluno { get; set; }
+        //public DbSet<Administrador> Administrador { get; set; }
+        //public DbSet<IPessoa> Pessoa { get; set; }
+        //public DbSet<Modulo> Modulos { get; set; }
+        //public DbSet<Curso> Cursos { get; set; }
+        //public DbSet<Professor> Professor { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-
+            modelBuilder.Entity<Questao>().HasRequired(q => q.Questionario).WithMany(q => q.Questoes).WillCascadeOnDelete(true);
+            
             modelBuilder.Entity<Aluno>().HasKey(a => a.Id).ToTable("Aluno");
             modelBuilder.Entity<Administrador>().HasKey(a => a.Id).ToTable("Administrador");
-            
+
             modelBuilder.Entity<Avaliacao>().HasKey(a => a.Id).ToTable("Avaliacao");
             modelBuilder.Entity<Questionario>().HasKey(a => a.Id).ToTable("Questionario");
             modelBuilder.Entity<Questao>().HasKey(a => a.Id).ToTable("Questao");

@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C5C3C20E-8B4E-4CB1-B240-E9F47F527590}</ProjectGuid>
+    <ProjectGuid>{14998120-2968-4726-8F8E-1041E34F9B99}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ProjetoBlocoDOO.Repository</RootNamespace>
-    <AssemblyName>ProjetoBlocoDOO.Repository</AssemblyName>
+    <RootNamespace>Projeto_de_Bloco_DOO</RootNamespace>
+    <AssemblyName>Projeto de Bloco DOO</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,8 +31,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,14 +45,28 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RepositorioGenerico.cs" />
+    <Compile Include="Interfaces\IPessoa.cs" />
+    <Compile Include="Objetos de Valor\Disciplina.cs" />
+    <Compile Include="Entidades\Administrador.cs" />
+    <Compile Include="Entidades\Avaliacao.cs" />
+    <Compile Include="Interfaces\IIdentificavel.cs" />
+    <Compile Include="Objetos de Valor\Curso.cs" />
+    <Compile Include="Objetos de Valor\Professor.cs" />
+    <Compile Include="Objetos de Valor\Questao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entidades\Questionario.cs" />
+    <Compile Include="Entidades\Aluno.cs" />
+    <Compile Include="Objetos de Valor\Resposta.cs" />
+    <Compile Include="Interfaces\IUsuario.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="DiagramaClasses.cd" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Projeto de Bloco DOO\ProjetoBlocoDOO.Modelo.csproj">
-      <Project>{14998120-2968-4726-8F8E-1041E34F9B99}</Project>
-      <Name>ProjetoBlocoDOO.Modelo</Name>
-    </ProjectReference>
+    <Content Include="Diagrama de Dados.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

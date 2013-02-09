@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace ProjetoBlocoDOO.Modelo
+namespace ProjetoBloco.Modelo
 {
     public class Questao :IIdentificavel
     {
@@ -11,24 +8,24 @@ namespace ProjetoBlocoDOO.Modelo
         {
             Id = _id;
             Texto = _texto;
-            Resposta =(Int32) ProjetoBlocoDOO.Modelo.Resposta.SemResposta;
+            Resposta = (Int32)ProjetoBloco.Modelo.Resposta.SemResposta;
         }
 
-        private Guid id;
+
         public Guid Id
         {
-            get { return id; }
-            set { id = value; }
+            get;
+            set;
         }
         
         /// <summary>
         /// Texto da questão
         /// </summary>
-        private String texto;
+
         public String Texto
         {
-            get { return texto; }
-            private set { texto = value; }
+            get;
+            private set;
         }
 
         /// <summary>
@@ -46,5 +43,7 @@ namespace ProjetoBlocoDOO.Modelo
         {
             Resposta = (Int32)_resposta;
         }
+
+        public Questionario Questionario { get; set; }
     }
 }

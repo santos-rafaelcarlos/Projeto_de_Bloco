@@ -52,9 +52,25 @@
     <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Projeto de Bloco DOO\ProjetoBlocoDOO.Modelo.csproj">
+    <ProjectReference Include="..\Projeto de Bloco DOO\ProjetoBloco.Modelo.csproj">
       <Project>{14998120-2968-4726-8F8E-1041E34F9B99}</Project>
-      <Name>ProjetoBlocoDOO.Modelo</Name>
+      <Name>ProjetoBloco.Modelo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjetoBlocoDOO.DAO.EntityFramework\ProjetoBloco.DAO.EF.csproj">
+      <Project>{8ED798C1-E6AA-4CF3-8A82-50292AE4CB1E}</Project>
+      <Name>ProjetoBloco.DAO.EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjetoBlocoDOO.DAO\ProjetoBloco.DAO.csproj">
+      <Project>{F47C4EE0-B78C-4E15-BE41-03FC389EF9D3}</Project>
+      <Name>ProjetoBloco.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjetoBlocoDOO.Factory\ProjetoBloco.Fabrica.csproj">
+      <Project>{4F6BA440-B17A-484A-8023-71D6C8F6E323}</Project>
+      <Name>ProjetoBloco.Fabrica</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProjetoBlocoDOO.Repository\ProjetoBloco.Repositorio.csproj">
+      <Project>{C5C3C20E-8B4E-4CB1-B240-E9F47F527590}</Project>
+      <Name>ProjetoBloco.Repositorio</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

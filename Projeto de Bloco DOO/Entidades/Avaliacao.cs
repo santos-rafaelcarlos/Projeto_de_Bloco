@@ -1,29 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Projeto_de_Bloco_DOO.Objetos_de_Valor;
 
-namespace ProjetoBlocoDOO.Modelo.Entidades
+namespace ProjetoBloco.Modelo
 {
     public class Avaliacao:IIdentificavel
     {
-        private string identificador;
+        public String Comentarios { get; set; }
 
-        private string objetivoDaAvaliacao;
-
-        private DateTime dataInicio;
         public DateTime DataInicio
         {
-            get { return dataInicio; }
-            set { dataInicio = value; }
+            get;
+            set;
         }
 
-        private DateTime dataTermino;
         public DateTime DataTermino
         {
-            get { return dataTermino; }
-            set { dataTermino = value; }
+            get;
+            set;
         }
 
 
@@ -33,19 +25,12 @@ namespace ProjetoBlocoDOO.Modelo.Entidades
             set;
         }
 
-        private Questionario questionario;
         public Questionario Questionario
         {
-            get { return questionario; }
-            set { questionario = value; }
+            get;
+            set;
         }
-
-        private Turma turma;
-
-        private Professor professor;
-
-        private Curso curso;
-
+        
         public Modulo Modulo { get; set; }
 
         public Guid Id

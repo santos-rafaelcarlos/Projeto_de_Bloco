@@ -1,38 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-namespace ProjetoBlocoDOO.Modelo
+namespace ProjetoBloco.Modelo
 {
     public class Questionario:IIdentificavel
-    {
-        private Guid id;
+    {       
+
         public Guid Id
         {
-            get { return id; }
-            set { id = value; }
+            get;
+            set;
         }
 
         /// <summary>
         /// criador do questionário
         /// </summary>
-        private Administrador criador;
+
         public Administrador Criador
         {
-            get { return criador; }
-            set { criador = value; }
+            get;
+            set;
         }
 
 
         /// <summary>
         /// Questões que compõem o questionário
-        /// </summary>
-        ICollection<Questao> questoes;
+        /// </summary>        
         public ICollection<Questao> Questoes
         {
-            get { return questoes; }
-            set { questoes = value; }
+            get;
+            set;
         }
     }
 }

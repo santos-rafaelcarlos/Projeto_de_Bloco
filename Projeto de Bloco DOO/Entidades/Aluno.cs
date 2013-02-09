@@ -1,7 +1,8 @@
-﻿
+﻿using System;
+
 namespace ProjetoBloco.Modelo
 {
-    public class Administrador : IPessoa, IUsuario
+    public class Aluno : IPessoa, IUsuario
     {
 
         public string Login
@@ -15,6 +16,13 @@ namespace ProjetoBloco.Modelo
         {
             get;
             set;
-        }            
+        }
+
+
+        public Int32 Matricula
+        {
+            get;
+            set;
+        }
     }
 }

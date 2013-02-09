@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using ProjetoBlocoDOO.Modelo;
 
-namespace Projeto_de_Bloco_DOO.Objetos_de_Valor
+namespace ProjetoBloco.Modelo
 {
     public class Modulo: IIdentificavel
     {
@@ -18,7 +15,7 @@ namespace Projeto_de_Bloco_DOO.Objetos_de_Valor
             set;
         }
 
-        public List<ProjetoBlocoDOO.Modelo.Aluno> Alunos
+        public List<Aluno> Alunos
         {
             get;
             set;

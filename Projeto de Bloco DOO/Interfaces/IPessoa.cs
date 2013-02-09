@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using ProjetoBlocoDOO.Modelo;
 
-namespace Projeto_de_Bloco_DOO.Interfaces
+namespace ProjetoBloco.Modelo
 {
     public abstract class IPessoa : IIdentificavel
     {        
