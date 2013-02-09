@@ -43,6 +43,12 @@
     <Compile Include="IDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Projeto de Bloco DOO\ProjetoBloco.Modelo.csproj">
+      <Project>{14998120-2968-4726-8F8E-1041E34F9B99}</Project>
+      <Name>ProjetoBloco.Modelo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
