@@ -11,16 +11,19 @@ namespace ProjetoBlocoDOO.DaoEF
     {
         private static Dictionary<Type, Persistencia<T>> _instances = new Dictionary<Type, Persistencia<T>>();
 
-        private ProjetoContext _context = null;
+        private static ProjetoContext _context = null;
         private DaoGenerico<T> _Dao = null;
 
         Persistencia()
-        {            
-            string connString = "projetoDB"; //"Server=santos_rcs-Note;Database=Projeto;Trusted_Connection=true;";
-            _context = new ProjetoContext(connString);
+        {
+            if (_context == null)
+            {
+                string connString = @"Server=SANTOS_RCS-NOTE\LOCAL;Database=Projeto;Trusted_Connection=true;";
+                _context = new ProjetoContext(connString);
 
-            _context.Configuration.LazyLoadingEnabled = true;
-            _context.Configuration.ProxyCreationEnabled = true;
+                _context.Configuration.LazyLoadingEnabled = true;
+                _context.Configuration.ProxyCreationEnabled = true;
+            }
 
             _Dao = new DaoGenerico<T>(_context);
         }

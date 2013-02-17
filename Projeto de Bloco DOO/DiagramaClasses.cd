@@ -24,8 +24,8 @@
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Aluno" />
-      <Property Name="Modulo" />
       <Property Name="Questionario" />
+      <Property Name="Modulo" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
@@ -77,11 +77,11 @@
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAACAAAAAQAAAAAAAAAAAACAAAAAAAAAAAAAAAEBAAA=</HashCode>
-      <FileName>Objetos de Valor\Disciplina.cs</FileName>
+      <FileName>Objetos de Valor\Modulo.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="Curso" />
       <Property Name="Professor" />
+      <Property Name="Curso" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Property Name="Alunos" />

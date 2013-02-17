@@ -11,17 +11,7 @@ namespace ProjetoBloco.DaoEF
         {
             
         }
-
-        //public DbSet<Avaliacao> Avaliacao { get; set; }
-        //public DbSet<Questionario> Questionario { get; set; }
-        //public DbSet<Questao> Questao { get; set; }
-        //public DbSet<Aluno> Aluno { get; set; }
-        //public DbSet<Administrador> Administrador { get; set; }
-        //public DbSet<IPessoa> Pessoa { get; set; }
-        //public DbSet<Modulo> Modulos { get; set; }
-        //public DbSet<Curso> Cursos { get; set; }
-        //public DbSet<Professor> Professor { get; set; }
-
+        
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Questao>().HasRequired(q => q.Questionario).WithMany(q => q.Questoes).WillCascadeOnDelete(true);

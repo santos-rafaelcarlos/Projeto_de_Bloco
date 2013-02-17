@@ -46,7 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IPessoa.cs" />
-    <Compile Include="Objetos de Valor\Disciplina.cs" />
+    <Compile Include="Objetos de Valor\Modulo.cs" />
     <Compile Include="Entidades\Administrador.cs" />
     <Compile Include="Entidades\Avaliacao.cs" />
     <Compile Include="Interfaces\IIdentificavel.cs" />
@@ -59,14 +59,13 @@
     <Compile Include="Objetos de Valor\Resposta.cs" />
     <Compile Include="Interfaces\IUsuario.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="DiagramaDados.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="DiagramaClasses.cd" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Diagrama de Dados.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
