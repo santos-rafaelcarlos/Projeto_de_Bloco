@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ProjetoBlocoDOO.Factory")]
+[assembly: AssemblyTitle("ProjetoBloco.Factory")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Convergencia")]
-[assembly: AssemblyProduct("ProjetoBlocoDOO.Factory")]
+[assembly: AssemblyProduct("ProjetoBloco.Factory")]
 [assembly: AssemblyCopyright("Copyright © Convergencia 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

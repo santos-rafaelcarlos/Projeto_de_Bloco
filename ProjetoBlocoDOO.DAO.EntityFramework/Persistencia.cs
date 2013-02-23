@@ -5,7 +5,7 @@ using System.Text;
 using ProjetoBloco.DaoEF;
 using ProjetoBloco.Modelo;
 
-namespace ProjetoBlocoDOO.DaoEF
+namespace ProjetoBloco.DaoEF
 {
     public sealed class Persistencia<T> where T: class,IIdentificavel
     {

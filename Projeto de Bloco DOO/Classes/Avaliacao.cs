@@ -12,7 +12,7 @@ namespace ProjetoBloco.Modelo
             set;
         }
 
-        public DateTime DataTermino
+        public DateTime? DataTermino
         {
             get;
             set;

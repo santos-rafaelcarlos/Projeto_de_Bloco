@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ProjetoBlocoDOO.DAO;
+using ProjetoBloco.DAO;
 using ProjetoBloco.Modelo;
 using ProjetoBloco.DaoEF;
 
-namespace ProjetoBlocoDOO.DaoEF
+namespace ProjetoBloco.DaoEF
 {
     public class DaoGenerico<T> : IDAL<T> where T : class,IIdentificavel
     {

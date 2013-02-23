@@ -4,6 +4,11 @@ namespace ProjetoBloco.Modelo
 {
     public class Questao :IIdentificavel
     {
+        public Questao()
+        {
+
+        }
+
         public Questao(Guid _id, string _texto)
         {
             Id = _id;
@@ -25,7 +30,7 @@ namespace ProjetoBloco.Modelo
         public String Texto
         {
             get;
-            private set;
+            set;
         }
 
         /// <summary>
@@ -37,7 +42,6 @@ namespace ProjetoBloco.Modelo
             get { return (Int32)resposta; }
             private set { resposta = (Resposta)value; }
         }
-
 
         public void EscolherResposta(Resposta _resposta)
         {

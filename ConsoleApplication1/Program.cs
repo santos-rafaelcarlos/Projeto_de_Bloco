@@ -4,7 +4,8 @@ using System.Linq;
 using System.Text;
 using ProjetoBloco.DaoEF;
 using ProjetoBloco.Modelo;
-using ProjetoBlocoDOO.Repository;
+using ProjetoBloco.Repository;
+using ProjetoBloco.Factory;
 
 namespace ConsoleApplication1
 {
@@ -12,28 +13,9 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            Aluno a = new Aluno()
-            {
-                Id = Guid.NewGuid(),
-                Login = "carlos.santos",
-                Matricula = 1,
-                Nome = "Rafael",
-                Senha = "abc123",
-            };
+            Professor item = Fabrica.Criar(1, "Aquino", "aquino.botelho@infnet.edu.br");
 
-            Curso c = new Curso()
-            {
-                Id = Guid.NewGuid(),
-                Nome = "MIT Engenharia de Software .Net",
-            };
-            
-
-
-            RepositorioGenerico<Aluno> repo = new RepositorioGenerico<Aluno>();
-            RepositorioGenerico<Curso> repo1 = new RepositorioGenerico<Curso>();            
-            repo.Salvar(a);
-            repo1.Salvar(c);
-            Console.ReadKey();
+            RepositorioGenerico<Professor>.Salvar(item);
         }
     }
 }
