@@ -7,7 +7,7 @@ namespace ProjetoBloco.DAO
 {
     public interface IDAL<T>
     {
-        List<T> BuscarTodos();
+        IQueryable<T> BuscarTodos();
 
         T Buscar(Guid id);
 

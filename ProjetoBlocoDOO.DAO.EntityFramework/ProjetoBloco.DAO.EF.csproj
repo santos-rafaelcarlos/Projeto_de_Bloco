@@ -46,7 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\AdministradorDAO.cs" />
+    <Compile Include="DAO\AlunoDAO.cs" />
+    <Compile Include="DAO\AvaliacaoDAO.cs" />
+    <Compile Include="DAO\CursoDAO.cs" />
     <Compile Include="DAO\DaoGenerico.cs" />
+    <Compile Include="DAO\ModuloDAO.cs" />
+    <Compile Include="DAO\ProfessorDAO.cs" />
+    <Compile Include="DAO\QuestaoDAO.cs" />
+    <Compile Include="DAO\QuestionarioDAO.cs" />
+    <Compile Include="DAO\RespostaDAO.cs" />
     <Compile Include="Persistencia.cs" />
     <Compile Include="ProjetoContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

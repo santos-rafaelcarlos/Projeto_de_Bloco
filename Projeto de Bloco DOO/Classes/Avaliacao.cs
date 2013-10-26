@@ -1,11 +1,16 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+using System.Collections.Generic;
 
 namespace ProjetoBloco.Modelo
 {
-    public class Avaliacao:IIdentificavel
+    [Table("Avaliacao")]
+    public class Avaliacao : IIdentificavel
     {
         public String Comentarios { get; set; }
 
+        [Required(ErrorMessage = "Nome não pode ser branco.")]
         public DateTime DataInicio
         {
             get;
@@ -18,25 +23,38 @@ namespace ProjetoBloco.Modelo
             set;
         }
 
+        public Guid AlunoID { get; set; }
+        public Guid QuestionarioID { get; set; }
+        public Guid ModuloID { get; set; }
 
-        public Aluno Aluno
+        [ForeignKey("AlunoID")]
+        [Required(ErrorMessage = "Nome não pode ser branco.")]
+        public virtual Aluno Aluno
         {
             get;
             set;
         }
 
-        public Questionario Questionario
+        [ForeignKey("QuestionarioID")]
+        [Required(ErrorMessage = "Nome não pode ser branco.")]
+        public virtual Questionario Questionario
         {
             get;
             set;
         }
-        
-        public Modulo Modulo { get; set; }
 
+        [ForeignKey("ModuloID")]
+        [Required(ErrorMessage = "Nome não pode ser branco.")]
+        public virtual Modulo Modulo { get; set; }
+
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id
         {
             get;
             set;
         }
+
+        public virtual ICollection<Resposta> Respostas { get; set; }
+
     }
 }

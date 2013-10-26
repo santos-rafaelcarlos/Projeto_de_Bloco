@@ -9,7 +9,7 @@ namespace ProjetoBloco.Repository
 {
     public class RepositorioGenerico<T> where T : class,IIdentificavel
     {
-        public static List<T> BuscarTodos()
+        public static IQueryable<T> BuscarTodos()
         {
             return Persistencia<T>.Instance.DAOGenerico.BuscarTodos();
         }

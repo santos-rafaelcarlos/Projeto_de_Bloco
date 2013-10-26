@@ -8,35 +8,33 @@ using ProjetoBloco.DaoEF;
 
 namespace ProjetoBloco.DaoEF
 {
-    public class DaoGenerico<T> : IDAL<T> where T : class,IIdentificavel
+    public abstract class DaoGenerico<T> : IDAL<T> where T : class,IIdentificavel
     {
-        private readonly ProjetoContext _context = null;
+        protected readonly ProjetoContext _context = null;
 
         public DaoGenerico(ProjetoContext context)
         {
             _context = context;
         }
-        
-        public List<T> BuscarTodos()
+
+        public virtual IQueryable<T> BuscarTodos() 
         {
-            return _context.Set<T>().ToList();
+         return _context.Set<T>().AsQueryable();
         }
 
-        public T Buscar(Guid id)
+        public virtual T Buscar(Guid id)
         {
             return _context.Set<T>().FirstOrDefault(e => e.Id == id);
         }
 
-        public void Inserir(T entity)
+        public virtual void Inserir(T entity)
         {
             _context.Set<T>().Add(entity);
-            SalvarTudo();
         }
 
-        public void Deletar(T entity)
+        public virtual void Deletar(T entity) 
         {
             _context.Set<T>().Remove(entity);
-            SalvarTudo();
         }
             
         public void Atualizar(T entity)

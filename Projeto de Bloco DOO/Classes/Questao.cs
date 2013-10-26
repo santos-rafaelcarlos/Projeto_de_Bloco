@@ -1,28 +1,28 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ProjetoBloco.Modelo
 {
-    public class Questao :IIdentificavel
+    [Table("Questao")]
+    public class Questao : IIdentificavel
     {
         public Questao()
         {
 
         }
 
-        public Questao(Guid _id, string _texto)
-        {
-            Id = _id;
-            Texto = _texto;
-            Resposta = (Int32)ProjetoBloco.Modelo.Resposta.SemResposta;
+        public Questao(string _texto)
+        {   
+            Texto = _texto;          
         }
 
-
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id
         {
             get;
             set;
         }
-        
+
         /// <summary>
         /// Texto da questão
         /// </summary>
@@ -32,22 +32,11 @@ namespace ProjetoBloco.Modelo
             get;
             set;
         }
+        
+        public Guid? QuestionarioID { get; set; }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        private Resposta resposta;
-        public Int32 Resposta
-        {
-            get { return (Int32)resposta; }
-            private set { resposta = (Resposta)value; }
-        }
-
-        public void EscolherResposta(Resposta _resposta)
-        {
-            Resposta = (Int32)_resposta;
-        }
-
-        public Questionario Questionario { get; set; }
+        [InverseProperty("ID")]
+        [ForeignKey("QuestionarioID")]        
+        public virtual Questionario Questionario { get; set; }
     }
 }

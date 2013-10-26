@@ -15,7 +15,7 @@ namespace TestProject1
         [TestMethod]
         public void TestMethod1()
         {
-            
+            RepositorioGenerico<Questao>.Salvar(new Questao() { Texto = "TEst" });
         }
     }
 }

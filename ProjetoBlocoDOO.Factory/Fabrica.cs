@@ -18,28 +18,27 @@ namespace ProjetoBloco.Factory
             props.Add("Email", email);
         }
 
-        private static void PreencherUsuarioProps(string login, string senha)
+        private static void PreencherUsuarioProps(string login)
         {
-            props.Add("Login", login);
-            props.Add("Senha", senha);
+            props.Add("Login", login);            
         }
         #endregion
 
-        public static Administrador Criar(string nome, string email, string login, string senha)
+        public static Administrador Criar(string nome, string email, string login)
         {
             props = new Dictionary<string, object>();
             PreencherPessoaProps(nome, email);
-            PreencherUsuarioProps(login, senha);
+            PreencherUsuarioProps(login);
 
             return GerenciadorFabrica<Administrador>.Instance.CriarInstancia(props);
         }
 
 
-        public static Aluno Criar(Int32 matricula, string nome, string email, string login, string senha)
+        public static Aluno Criar(Int32 matricula, string nome, string email, string login)
         {
             props = new Dictionary<string,object>();
             PreencherPessoaProps(nome,email);
-            PreencherUsuarioProps(login,senha);
+            PreencherUsuarioProps(login);
             props.Add("Matricula",matricula);
                         
             return GerenciadorFabrica<Aluno>.Instance.CriarInstancia(props);
@@ -106,8 +105,8 @@ namespace ProjetoBloco.Factory
 
             Questionario item = GerenciadorFabrica<Questionario>.Instance.CriarInstancia(props);
 
-            foreach (var questao in item.Questoes)
-                questao.Questionario = item;
+            //foreach (var questao in item.Questoes)
+            //    questao.Questionario = item;
 
             return item;
         }

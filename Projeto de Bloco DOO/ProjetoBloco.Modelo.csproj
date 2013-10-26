@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Resposta.cs" />
     <Compile Include="Interfaces\IPessoa.cs" />
     <Compile Include="Classes\Modulo.cs" />
     <Compile Include="Classes\Administrador.cs" />
@@ -56,7 +57,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Classes\Questionario.cs" />
     <Compile Include="Classes\Aluno.cs" />
-    <Compile Include="Enums\Resposta.cs" />
+    <Compile Include="Enums\Escala.cs" />
     <Compile Include="Interfaces\IUsuario.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using ProjetoBloco.DaoEF;
 using ProjetoBloco.Modelo;
+using ProjetoBloco.DAO;
 
 namespace ProjetoBloco.DaoEF
 {
@@ -12,20 +13,52 @@ namespace ProjetoBloco.DaoEF
         private static Dictionary<Type, Persistencia<T>> _instances = new Dictionary<Type, Persistencia<T>>();
 
         private static ProjetoContext _context = null;
-        private DaoGenerico<T> _Dao = null;
+        private IDAL<T> _Dao = null;
 
         Persistencia()
         {
             if (_context == null)
             {
-                string connString = @"Server=SANTOS_RCS-NOTE\LOCAL;Database=Projeto;Trusted_Connection=true;";
+                string connString = @"Server=SANTOS_RCS-NOTE\LOCAL;Database=ProjetoBloco;Trusted_Connection=true;";
                 _context = new ProjetoContext(connString);
+
+                _context.Database.CreateIfNotExists();
 
                 _context.Configuration.LazyLoadingEnabled = true;
                 _context.Configuration.ProxyCreationEnabled = true;
             }
 
-            _Dao = new DaoGenerico<T>(_context);
+            switch (typeof(T).Name)
+            {
+                case "Administrador":
+                    _Dao = (IDAL<T>)new AdministradorDAO(_context);
+                    break;
+                case "Aluno":
+                    _Dao = (IDAL<T>)new AlunoDAO(_context);
+                    break;
+                case "Avaliacao":
+                    _Dao = (IDAL<T>)new AvaliacaoDAO(_context);
+                    break;
+                case "Curso":
+                    _Dao = (IDAL<T>)new CursoDAO(_context);
+                    break;
+                case "Modelo":
+                    _Dao = (IDAL<T>)new ModuloDAO(_context);
+                    break;
+                case "Professor":
+                    _Dao = (IDAL<T>)new ProfessorDAO(_context);
+                    break;
+                case "Questionario":
+                    _Dao = (IDAL<T>)new QuestionarioDAO(_context);
+                    break;
+                case "Resposta":
+                    _Dao = (IDAL<T>)new RespostaDAO(_context);
+                    break;
+                case "Questao":
+                default:                
+                    _Dao = (IDAL<T>)new QuestaoDAO(_context);                    
+                    break;
+            }
         }
 
         public static Persistencia<T> Instance
@@ -39,6 +72,6 @@ namespace ProjetoBloco.DaoEF
             }
         }
 
-        public DaoGenerico<T> DAOGenerico { get { return _Dao; } }
+        public IDAL<T> DAOGenerico { get { return _Dao; } }
     }
 }

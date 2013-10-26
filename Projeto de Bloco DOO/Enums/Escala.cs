@@ -1,7 +1,7 @@
 ﻿
 namespace ProjetoBloco.Modelo
 {
-    public enum Resposta
+    public enum Escala
     {
         SemResposta = 0,
         DiscordoTotalmente = 1,
