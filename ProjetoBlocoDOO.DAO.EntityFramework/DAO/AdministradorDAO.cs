@@ -21,7 +21,7 @@ namespace ProjetoBloco.DAO
 
         public override Administrador Buscar(Guid id)
         {
-            return _context.Administrador.FirstOrDefault(e => e.Id == id);
+            return _context.Administrador.Find(id);
         }
 
         public override void Inserir(Administrador entity)
@@ -35,5 +35,7 @@ namespace ProjetoBloco.DAO
             _context.Administrador.Remove(entity);
             SalvarTudo();
         }
+
+        
     }
 }

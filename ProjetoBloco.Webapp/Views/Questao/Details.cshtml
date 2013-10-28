@@ -1,0 +1,29 @@
+﻿@model ProjetoBloco.Modelo.Questao
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Questao</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Texto)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Texto)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Questionario)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Questionario.Identificador)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

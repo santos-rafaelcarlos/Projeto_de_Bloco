@@ -19,11 +19,9 @@ namespace ProjetoBloco.DaoEF
         {
             if (_context == null)
             {
-                string connString = @"Server=SANTOS_RCS-NOTE\LOCAL;Database=ProjetoBloco;Trusted_Connection=true;";
+                string connString = @"Server=.\sqlexpress;Database=ProjetoBlocoV3;Trusted_Connection=true;";
                 _context = new ProjetoContext(connString);
-
-                _context.Database.CreateIfNotExists();
-
+                               
                 _context.Configuration.LazyLoadingEnabled = true;
                 _context.Configuration.ProxyCreationEnabled = true;
             }
@@ -42,7 +40,7 @@ namespace ProjetoBloco.DaoEF
                 case "Curso":
                     _Dao = (IDAL<T>)new CursoDAO(_context);
                     break;
-                case "Modelo":
+                case "Modulo":
                     _Dao = (IDAL<T>)new ModuloDAO(_context);
                     break;
                 case "Professor":

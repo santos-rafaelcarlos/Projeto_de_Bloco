@@ -29,7 +29,7 @@ namespace ProjetoBloco.Modelo
         public Int32 Valor
         {
             get { return (Int32)valor; }
-            private set { valor = (Escala)value; }
+           private set { valor = (Escala)value; }
         }
 
         public void EscolherResposta(Escala _resposta)
@@ -37,17 +37,19 @@ namespace ProjetoBloco.Modelo
             Valor = (Int32)_resposta;
         }
 
+        [Required(ErrorMessage = "Nome não pode ser branco.")]
         public Guid AvaliacaoID { get; set; }
+        [Required(ErrorMessage = "Nome não pode ser branco.")]
         public Guid QuestaoID { get; set; }
 
 
-        [ForeignKey("AvaliacaoID")]
-        [Required(ErrorMessage = "Nome não pode ser branco.")]
+        [ForeignKey("AvaliacaoID")]        
         public virtual Avaliacao Avaliacao { get; set; }
 
 
-        [ForeignKey("QuestaoID")]
-        [Required(ErrorMessage = "Nome não pode ser branco.")]
+        [ForeignKey("QuestaoID")]        
         public virtual Questao Questao { get; set; }
+
+        public DateTime DataResposta { get; set; }
     }
 }

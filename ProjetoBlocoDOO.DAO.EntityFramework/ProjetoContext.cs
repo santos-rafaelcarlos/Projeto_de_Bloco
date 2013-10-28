@@ -32,6 +32,8 @@ namespace ProjetoBloco.DaoEF
                 .HasRequired(r => r.Avaliacao)
                 .WithMany(a => a.Respostas)
                 .WillCascadeOnDelete(true);
+
+            base.OnModelCreating(modelBuilder);
         }
 
         public ProjetoContext(string connectionString)

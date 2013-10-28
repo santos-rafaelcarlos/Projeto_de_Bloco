@@ -5,6 +5,8 @@ using System.Text;
 using ProjetoBloco.DAO;
 using ProjetoBloco.Modelo;
 using ProjetoBloco.DaoEF;
+using System.Data;
+using System.Reflection;
 
 namespace ProjetoBloco.DaoEF
 {
@@ -37,8 +39,17 @@ namespace ProjetoBloco.DaoEF
             _context.Set<T>().Remove(entity);
         }
             
-        public void Atualizar(T entity)
+        public virtual void Atualizar(T entity)
         {
+            var originalItem = Buscar(entity.Id);
+            var props = entity.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance);
+
+            foreach (var prop in props)
+            {
+                var value = prop.GetValue(entity, null);
+                prop.SetValue(originalItem, value, null);
+            }
+
             SalvarTudo();
         }
 

@@ -12,8 +12,7 @@ namespace ProjetoBloco.Modelo
         [Required(ErrorMessage = "Nome não pode ser branco.")]
         public String Nome { get; set; }
 
-        [ForeignKey("ProfessorID")]
-        [Required(ErrorMessage = "Nome não pode ser branco.")]
+        [ForeignKey("ProfessorID")]        
         public virtual Professor Professor { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -29,11 +28,12 @@ namespace ProjetoBloco.Modelo
             set;
         }
 
-        public Guid ProfessorID { get; set; }        
+        [Required(ErrorMessage = "Nome não pode ser branco.")]
+        public Guid ProfessorID { get; set; }
+        [Required(ErrorMessage = "Nome não pode ser branco.")]
         public Guid CursoID { get; set; }
 
-        [ForeignKey("CursoID")]
-        [Required(ErrorMessage = "Nome não pode ser branco.")]
+        [ForeignKey("CursoID")]        
         public virtual Curso Curso
         {
             get;

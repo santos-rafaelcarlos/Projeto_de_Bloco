@@ -1,0 +1,25 @@
+﻿@if (Request.IsAuthenticated) {
+    <text>
+        Oi,  @User.Identity.Name!
+       
+       <ul>
+         @if (User.IsInRole("superUser"))
+         {             
+                <li>@Html.ActionLink("Super User", "Index", "Dashboard", new { area = "SecurityGuard" }, null)</li>            
+         }
+         
+          
+                <li>@Html.ActionLink("Mudar Senha", "ChangePassword", "SGAccount")</li>            
+
+        @using (Html.BeginForm("LogOff", "SGAccount", FormMethod.Post, new { id = "logoutForm" })) {
+            @Html.AntiForgeryToken()
+            <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+        }
+         </ul>
+    </text>
+} else {
+    <ul>             
+        @*<li>@Html.ActionLink("Register", "Register", "SGAccount", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>*@
+        <li>@Html.ActionLink("Log in", "Login", "SGAccount", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+    </ul>
+}

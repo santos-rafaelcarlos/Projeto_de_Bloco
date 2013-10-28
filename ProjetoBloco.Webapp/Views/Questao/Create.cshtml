@@ -1,0 +1,43 @@
+﻿@model ProjetoBloco.Modelo.Questao
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Questao</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Texto)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Texto)
+            @Html.ValidationMessageFor(model => model.Texto)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.QuestionarioID, "Questionario")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("QuestionarioID", String.Empty)
+            @Html.ValidationMessageFor(model => model.QuestionarioID)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

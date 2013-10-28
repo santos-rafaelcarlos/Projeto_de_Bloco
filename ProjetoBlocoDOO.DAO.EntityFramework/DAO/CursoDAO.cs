@@ -21,17 +21,19 @@ namespace ProjetoBloco.DAO
 
         public override Curso Buscar(Guid id)
         {
-            return _context.Curso.FirstOrDefault(e => e.Id == id);
+            return _context.Curso.Find(id);
         }
 
         public override void Inserir(Curso entity)
         {
             _context.Curso.Add(entity);
+            SalvarTudo();
         }
 
         public override void Deletar(Curso entity)
         {
             _context.Curso.Remove(entity);
+            SalvarTudo();
         }
     }
 }

@@ -22,7 +22,11 @@ namespace ProjetoBloco.DAO
 
         public override Questionario Buscar(Guid id)
         {
-            return _context.Questionario.FirstOrDefault(e => e.Id == id);
+            Questionario quest =_context.Questionario.Find(id);
+            quest.Criador = _context.Administrador.Find(quest.CriadorID);
+            quest.Questoes = _context.Questao.Where(q => q.QuestionarioID == id).ToList();
+
+            return quest;
         }
 
         public override void Inserir(Questionario entity)

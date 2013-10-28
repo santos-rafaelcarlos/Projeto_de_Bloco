@@ -23,12 +23,16 @@ namespace ProjetoBloco.Modelo
             set;
         }
 
+        [Required(ErrorMessage = "Nome não pode ser branco.")]
         public Guid AlunoID { get; set; }
+
+        [Required(ErrorMessage = "Nome não pode ser branco.")]
         public Guid QuestionarioID { get; set; }
+
+        [Required(ErrorMessage = "Nome não pode ser branco.")]
         public Guid ModuloID { get; set; }
 
-        [ForeignKey("AlunoID")]
-        [Required(ErrorMessage = "Nome não pode ser branco.")]
+        [ForeignKey("AlunoID")]        
         public virtual Aluno Aluno
         {
             get;
@@ -36,7 +40,6 @@ namespace ProjetoBloco.Modelo
         }
 
         [ForeignKey("QuestionarioID")]
-        [Required(ErrorMessage = "Nome não pode ser branco.")]
         public virtual Questionario Questionario
         {
             get;
@@ -44,7 +47,6 @@ namespace ProjetoBloco.Modelo
         }
 
         [ForeignKey("ModuloID")]
-        [Required(ErrorMessage = "Nome não pode ser branco.")]
         public virtual Modulo Modulo { get; set; }
 
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -55,6 +57,19 @@ namespace ProjetoBloco.Modelo
         }
 
         public virtual ICollection<Resposta> Respostas { get; set; }
+
+        [Required(ErrorMessage = "Nome não pode ser branco.")]
+        public Guid CriadorID { get; set; }
+        
+        /// <summary>
+        /// criador do questionário
+        /// </summary>
+        [ForeignKey("CriadorID")]
+        public virtual Administrador Criador
+        {
+            get;
+            set;
+        }
 
     }
 }

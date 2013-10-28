@@ -1,0 +1,41 @@
+﻿@model ProjetoBloco.Modelo.Questao
+
+@{
+    ViewBag.Title = "Responder";
+}
+
+<h2>Responder</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Questao</legend>
+        <table>
+        <tr>
+        <td>
+        <div class="editor-label">
+            @Html.DisplayFor(model => model.Texto) 
+        </div>      
+        </td> 
+         <td>
+        <div class="editor-field">
+          @Html.DropDownList("ValorRespostas")
+        </div>
+        </td> 
+        </tr>
+        </table>
+        <p>
+            <input type="submit" value="Confirmar" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

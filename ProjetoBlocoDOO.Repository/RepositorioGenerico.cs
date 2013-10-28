@@ -7,24 +7,30 @@ using ProjetoBloco.DaoEF;
 
 namespace ProjetoBloco.Repository
 {
-    public class RepositorioGenerico<T> where T : class,IIdentificavel
+    public class RepositorioGenerico<T> : IRepositorio<T> where T : class,IIdentificavel
     {
-        public static IQueryable<T> BuscarTodos()
+        public IQueryable<T> BuscarTodos()
         {
             return Persistencia<T>.Instance.DAOGenerico.BuscarTodos();
         }
 
-        public static void Salvar(T entidade)
+        public void Incluir(T entidade)
         {
             Persistencia<T>.Instance.DAOGenerico.Inserir(entidade);
         }
 
-        public static void Excluir(T entidade)
+
+        public void Atualizar(T entidade)
+        {
+            Persistencia<T>.Instance.DAOGenerico.Atualizar(entidade);
+        }
+
+        public void Excluir(T entidade)
         {
             Persistencia<T>.Instance.DAOGenerico.Deletar(entidade);
         }
 
-        public static T Buscar(Guid id)
+        public T Buscar(Guid id)
         {
             return Persistencia<T>.Instance.DAOGenerico.Buscar(id);
         }

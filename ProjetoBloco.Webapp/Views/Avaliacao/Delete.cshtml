@@ -1,0 +1,60 @@
+﻿@model ProjetoBloco.Modelo.Avaliacao
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Avaliacao</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Comentarios)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Comentarios)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DataInicio)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataInicio)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DataTermino)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DataTermino)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Aluno.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Aluno.Nome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Questionario.Id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Questionario.Id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Modulo.Nome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Modulo.Nome)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

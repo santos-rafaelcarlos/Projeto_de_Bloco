@@ -22,7 +22,10 @@ namespace ProjetoBloco.DAO
 
         public override Resposta Buscar(Guid id)
         {
-            return _context.Resposta.FirstOrDefault(e => e.Id == id);
+            Resposta resp = _context.Resposta.Find(id);
+            resp.Avaliacao = _context.Avaliacao.Find(resp.AvaliacaoID);
+            resp.Questao = _context.Questao.Find(resp.QuestaoID);
+            return resp;
         }
 
         public override void Inserir(Resposta entity)

@@ -17,6 +17,8 @@ namespace ProjetoBloco.Modelo
 
         public Guid CriadorID { get; set; }
 
+        public String Identificador { get; set; }
+
         /// <summary>
         /// criador do questionário
         /// </summary>

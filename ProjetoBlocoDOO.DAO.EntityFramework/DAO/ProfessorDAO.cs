@@ -22,17 +22,19 @@ namespace ProjetoBloco.DAO
 
         public override Professor Buscar(Guid id)
         {
-            return _context.Professor.FirstOrDefault(e => e.Id == id);
+            return _context.Professor.Find(id);
         }
 
         public override void Inserir(Professor entity)
         {
             _context.Professor.Add(entity);
+            SalvarTudo();
         }
-
+        
         public override void Deletar(Professor entity)
         {
             _context.Professor.Remove(entity);
+            SalvarTudo();
         }
     }
 }

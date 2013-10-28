@@ -1,0 +1,44 @@
+﻿@model IEnumerable<ProjetoBloco.Modelo.Avaliacao>
+
+@{
+    ViewBag.Title = "Avaliações a Responder";
+}
+
+<table>
+    <tr>       
+        <th>
+            @Html.DisplayNameFor(model => model.DataInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataTermino)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Questionario)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Modulo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataInicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataTermino)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Questionario.Identificador)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Modulo.Nome)
+        </td>
+        <td>
+            @Html.ActionLink("Responder", "Responder", new { id=item.Id })            
+        </td>
+    </tr>
+}
+
+</table>
