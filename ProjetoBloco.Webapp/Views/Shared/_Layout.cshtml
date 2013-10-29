@@ -22,10 +22,9 @@
                         <ul id="menu">
                             <li>@Html.ActionLink("Home", "Index", "Home")</li>
                             
-                            @if (User.IsInRole("admin")
-                                || User.IsInRole("superUser"))
+                            @if (User.IsInRole("superUser"))
                             {
-                             <li>@Html.ActionLink("Administrador", "Index", "Administrador")</li>
+                               <li>@Html.ActionLink("Administrador", "Index", "Administrador")</li>
                             }
                             
                             @if (User.IsInRole("admin"))
